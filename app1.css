@@ -28,6 +28,7 @@ body {
   color: #333;
   font-size: 1.2em;
   font-weight: 500;
+  cursor: pointer;
 }
 .calculator .orange {
   background-color: #FF8400;
