@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="C:\Users\A Pallavi\Desktop\calculator\app1.css">
+    </script>
+  </head>
+  <body>
+    <form class="calculator" action="" name="calc">
+      <input class="textview" type="text" name="txt" placeholder="">
+      <span class="operations" onclick="document.calc.txt.value += '+';">+</span>
+      <span class="operations" onclick="document.calc.txt.value += '-';">-</span>
+      <span class="operations" onclick="document.calc.txt.value += '*';">&times;</span>
+      <span class="operations" onclick="document.calc.txt.value += '/';">&divide;</span>
+      <span onclick="document.calc.txt.value += '7';">7</span>
+      <span onclick="document.calc.txt.value += '8';">8</span>
+      <span onclick="document.calc.txt.value += '9';">9</span>
+      <span class="operations" onclick="document.calc.txt.value += '%';">%</span>
+      <span onclick="document.calc.txt.value += '4';">4</span>
+      <span onclick="document.calc.txt.value += '5';">5</span>
+      <span onclick="document.calc.txt.value += '6';">6</span>
+      <span class="operations" onclick="document.calc.txt.value += '0';">0</span>
+      <span onclick="document.calc.txt.value += '1';">1</span>
+      <span onclick="document.calc.txt.value += '2';">2</span>
+      <span onclick="document.calc.txt.value += '3';">3</span>
+      <span class="operations" onclick="document.calc.txt.value += '.';">.</span>
+      <span class="orange" onclick="document.calc.txt.value = '';">C</span>
+      <span class="orange" onclick="document.calc.txt.value = document.calc.txt.value.substring(0, document.calc.txt.value.length-1);">&#8592;</span>
+      <span class="equal"onclick="document.calc.txt.value = calculation(document.calc.txt.value);">=</span>
+    </form>
+    <div id="history" style="width:240px;">
+      <h3 align="center">History</h3>
+      <hr size ="3">
+      <p> </p>
+    </div>
+    <script type="text/javascript">
+    let history = document.getElementById('history');
+    function calculation(v){
+        para = document.createElement('p');
+        data = v + "=" + eval(v);
+        para.innerText = data;
+        history.appendChild(para);
+        return eval(v);
+    }
+
+    </script>
+  </body>
+</html>
